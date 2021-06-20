@@ -18,11 +18,37 @@
 //= require_tree .
 
 
+
 $(function(){
-  $('.box1').on('click',function(){
-   $('.box1').slideUp(1000);
+  $('#btn1').on('click',function(){
+    $('.box1').slideDown();
+  });
+
+  $('#btn2').on('click',function(){
+    $('.box1').slideUp();
+    });
+});
+
+$(function(){
+  $('#btn1').on('click',function(){
+    $('.box1').slideDown();
+  });
+
+$(function(){
+  $('#btn3').mouseover(function(){
+    $('.box2').slideDown(1000);
   });
 });
+$(function(){
+  $('#btn4').mouseover(function(){
+    $('.box2').slideUp(1000);
+  });
+});
+
+
+
+
+
 
 
 

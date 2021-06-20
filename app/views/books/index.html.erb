@@ -1,9 +1,17 @@
 <h1 class='jquery'>Yukihiro!</h1>
-<input type="button" id="btn1" value="slideUp">
-<input type="button" id="btn1" value="slieDown">
+<input type="button" id="btn1" value="slideDown">
+<input type="button" id="btn2" value="slieUp">
+<input type="button" id="btn3" value="CLICK!">
+<input type="button" id="btn4" value="CLICK2!">
 <div class="all_box">
- <div class="box1"></div>
- <div class="box2"></div>
+ <div class="box1">
+  <%= form_with model: @book, url:'/books', local: :true do |f| %>
+   <%= f.text_field :title %>
+   <%= f.text_area :body %>
+   <%= f.submit %>
+  <% end %>
+ </div>
+ <div class="box2">あいうえお</div>
  <div class="box3"></div>
  <div class="box4"></div>
 </div>
