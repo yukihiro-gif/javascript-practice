@@ -1,6 +1,7 @@
 class BooksController < ApplicationController
   def index
     @book = Book.new()
+    @books = Book.all
   end
 
 
@@ -10,13 +11,13 @@ class BooksController < ApplicationController
     # ２. データをデータベースに保存するためのsaveメソッド実行
     book.save
     # ３. トップ画面へリダイレクト
-    redirect_to '/books'
+    redirect_to books_path
    end
 
   private
   # ストロングパラメータ
   def list_params
-    params.require(:book).permit(:title, :body)
+    params.require(:book).permit(:title, :body, :image)
   end
 
 end

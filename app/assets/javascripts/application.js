@@ -30,11 +30,6 @@ $(function(){
 });
 
 $(function(){
-  $('#btn1').on('click',function(){
-    $('.box1').slideDown();
-  });
-
-$(function(){
   $('#btn3').mouseover(function(){
     $('.box2').slideDown(1000);
   });
