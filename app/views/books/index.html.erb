@@ -12,13 +12,23 @@
    <%= f.attachment_field :image %>
    <%= f.submit %>
   <% end %>
+  <%= form_with model: @book2, url: book2s_path, local: :true do |f| %>
+   <%= f.text_field :title %>
+   <%= f.text_area :body %>
+
+   <%= f.submit %>
+  <% end %>
  </div>
  <div class="box2">
  あいうえお</br>
  <% @books.each do |book| %>
  <%= attachment_image_tag book, :image, :fill, 100, 100, format: 'jpeg' %>
+ <%= book.title %>
+ <%= book.body %>
  <% end %>
  </div>
- <div class="box3"></div>
+ <div class="box3">
+
+ </div>
  <div class="box4"></div>
 </div>

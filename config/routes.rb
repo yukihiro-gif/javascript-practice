@@ -4,5 +4,6 @@ Rails.application.routes.draw do
 
   resources :homes
   resources :books
+  resources :book2s
 
 end
